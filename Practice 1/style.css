@@ -1,0 +1,95 @@
+.board {
+  margin: auto;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border: black solid 2px;
+  box-shadow: 2px 2px 10px 1px gray;
+  background-color: rgb(214, 147, 238);
+}
+.tile:hover {
+  background-color: rgb(126, 33, 189);
+}
+.tile {
+  float: left;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: black solid 1px;
+}
+.fill-o::after {
+  content: "";
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  border: rgb(225, 215, 255) solid 3px;
+}
+.fill-x::before {
+  content: "";
+  top: 40px;
+  left: 7px;
+  width: 90px;
+  height: 5px;
+  position: relative;
+  border-radius: 25px;
+  display: inline-block;
+  transform: rotate(45deg);
+  background-color: rgb(225, 215, 255);
+}
+.fill-x::after {
+  content: "";
+  top: 20px;
+  left: 5px;
+  width: 90px;
+  height: 5px;
+  position: relative;
+  border-radius: 20px;
+  display: inline-block;
+  transform: rotate(-45deg);
+  background-color: rgb(225, 215, 255);
+}
+.winO::after {
+  content: "Win O";
+  bottom: 215px;
+  font-size: 113px;
+  position: relative;
+  text-align: center;
+  background-color: rgb(0, 253, 0);
+  animation: twinkle-2 3s infinite;
+}
+.winX::after {
+  content: "Win X";
+  bottom: 215px;
+  font-size: 113px;
+  text-align: center;
+  position: relative;
+  background-color: rgb(0, 253, 0);
+  animation: twinkle-2 3s infinite;
+}
+.warning::after {
+  content: "Game Over";
+  left: 1px;
+  bottom: 187px;
+  font-size: 64.5px;
+  text-align: center;
+  position: relative;
+  background-color: red;
+  animation: twinkle-2 3s infinite;
+}
+.restart {
+  width: 35vw;
+  height: 20vh;
+}
+.status {
+  text-align: center;
+}
+.set {
+  background-color: rgb(238, 187, 239);
+}
+
